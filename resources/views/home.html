@@ -1,0 +1,41 @@
+<!-- <pre>{{ api_text }}</pre> -->
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABS Mailchimp Data</title>
+    <link rel="stylesheet" href="/css/foundation.css" />
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body>
+<table>
+	<thead>
+		<tr>
+			<th>Email Address</th>
+			<th>Status</th>
+			<th>IP Address</th>
+			<th>Language</th>
+			<th>Location</th>
+		</tr>
+	</thead>
+{% for member in api %}
+<tr>
+	<td>{{ member.email_address }}</td>
+	<td>{{ member.status }}</td>
+	<td>{{ member.timestamp_signup }}</td>
+	<td>{{ member.ip_signup }}</td>
+	<td>{{ member.language }}</td>
+	
+</tr>
+{% endfor %}
+</table>
+
+
+    <script src="/js/vendor/jquery.min.js"></script>
+    <script src="/js/vendor/what-input.min.js"></script>
+    <script src="/js/foundation.min.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

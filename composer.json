@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Acme\\": "app/Acme",
+            "Pacely\\": "src/"
+        }
+    },
+    "require": {
+        "slim/slim": "~2.0",
+        "slim/views": "^0.1.3",
+        "twig/twig": "^1.18",
+        "pacely/mailchimp-apiv3": "dev-master"
+    }
+}
